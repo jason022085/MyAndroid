@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="44dp"
+        android:text="請輸入姓名已開始遊戲"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="請輸入玩家姓名"
+        app:layout_constraintStart_toStartOf="@+id/tv_text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        app:layout_constraintStart_toStartOf="@+id/ed_name"
+        app:layout_constraintTop_toBottomOf="@+id/ed_name"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/btn_scissor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剪刀" />
+
+        <RadioButton
+            android:id="@+id/btn_stone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="石頭" />
+
+        <RadioButton
+            android:id="@+id/btn_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="布" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_mora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="猜拳"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup1"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="101dp"
+        android:layout_height="53dp"
+        android:text="姓名"
+        app:layout_constraintStart_toStartOf="@+id/btn_mora"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mora" />
+
+    <TextView
+        android:id="@+id/tv_winner"
+        android:layout_width="87dp"
+        android:layout_height="53dp"
+        android:text="勝利者"
+        app:layout_constraintStart_toEndOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mora" />
+
+    <TextView
+        android:id="@+id/tv_mmora"
+        android:layout_width="94dp"
+        android:layout_height="52dp"
+        android:text="我方出拳"
+        app:layout_constraintStart_toEndOf="@+id/tv_winner"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mora" />
+
+    <TextView
+        android:id="@+id/tv_cmora"
+        android:layout_width="83dp"
+        android:layout_height="52dp"
+        android:text="電腦出拳"
+        app:layout_constraintStart_toEndOf="@+id/tv_mmora"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mora" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
